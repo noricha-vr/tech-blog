@@ -1,0 +1,72 @@
+site_name: "Tech Blog"
+site_url: https://blog.kojin.works
+site_description: "AIエージェント開発の技術ブログ"
+site_author: "noricha-vr"
+repo_url: https://github.com/noricha-vr/tech-blog
+
+theme:
+  name: material
+  language: ja
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search:
+      lang: ja
+  - blog:
+      blog_dir: blog
+      post_date_format: "yyyy年M月d日"
+      post_url_format: "{slug}"
+      archive_date_format: "yyyy年M月"
+      categories_allowed:
+        - AI
+        - Agent
+        - MkDocs
+        - Python
+        - Tips
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  alternate:
+    - link: /
+      name: 日本語
+      lang: ja
+    - link: /en/
+      name: English
+      lang: en
+
+nav:
+  - index.md
+  - Blog: blog/index.md
+  - Tags: tags.md

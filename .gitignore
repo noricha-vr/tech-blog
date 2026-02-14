@@ -1,0 +1,9 @@
+site/
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.local
+.env.*.local
+docs/tmp/
+.DS_Store
