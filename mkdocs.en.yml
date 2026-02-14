@@ -1,6 +1,7 @@
 INHERIT: mkdocs.yml
 
 site_name: "Tech Blog"
+site_url: https://blog.kojin.works/en/
 site_description: "Tech blog about AI agent development"
 docs_dir: docs-en
 site_dir: site/en
