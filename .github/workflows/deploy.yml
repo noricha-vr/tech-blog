@@ -23,9 +23,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build (ja + en)
-        run: |
-          mkdocs build -f mkdocs.yml
-          mkdocs build -f mkdocs.en.yml
+        run: ./build.sh
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
